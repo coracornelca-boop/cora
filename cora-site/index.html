@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CORA Startup — Des solutions numériques, des résultats concrets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sky"></div>
+<canvas id="network"></canvas>
+<canvas id="bolts"></canvas>
+<div class="flash-overlay" id="flash"></div>
+
+<main>
+  <!-- Header / Nav -->
+  <header>
+    <nav class="wrap">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="CORA Startup" style="height:34px; width:auto; margin-right:4px;">
+        <span>CORA</span>
+      </div>
+      <ul>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#innovation">Innovation</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#equipe">Équipe</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Propulser mon projet</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero wrap">
+    <div class="badge-promo"><span></span>L'innovation numérique à votre portée</div>
+    <h1 class="hero-title">Des solutions numériques,<br><span class="gradient-text">des résultats concrets.</span></h1>
+    <p class="lead">Nous transformons vos idées complexes en plateformes intuitives, évolutives et taillées pour capter de nouveaux marchés.</p>
+    
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="#contact" class="btn btn-primary">Démarrer maintenant</a>
+      <a href="#solutions" class="btn" style="border: 1px solid var(--line); background: rgba(255,255,255,0.02)">Voir nos projets</a>
+    </div>
+
+    <!-- Interface Mockup -->
+    <div class="mockup-shell" id="solutions">
+      <div class="mockup-topbar">
+        <span></span><span></span><span></span>
+        <div class="dot"></div>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-copy">
+          <div class="m-eyebrow">Faaki Energy • Énergie Intelligente</div>
+          <h3>Moderniser la gestion et distribution de carburant.</h3>
+          <p>Une architecture logicielle cloud synchronisée à une application mobile avec tracking GPS en temps réel et validation sécurisée par QR code.</p>
+          <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">En savoir plus</a>
+        </div>
+        <div class="mockup-chart">
+          <div class="chart-header">
+            <div>
+              <p style="font-size: 0.8rem; color: var(--ink-dim);">Livraisons globales</p>
+              <h4 style="font-size: 1.25rem; margin-top: 4px;">+148%</h4>
+            </div>
+            <span class="growth">Optimisé</span>
+          </div>
+          <div class="bars">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Row -->
+  <section class="wrap" style="padding: 40px 24px;">
+    <div class="feature-row">
+      <div class="feature-card">
+        <div class="ico">⚡</div>
+        <h4>Haute Performance</h4>
+        <p>Code optimisé et temps de chargement ultra-rapide.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">🔒</div>
+        <h4>Sécurité Native</h4>
+        <p>Protocoles de chiffrement et d'authentification avancés.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">📱</div>
+        <h4>Design Responsive</h4>
+        <p>Expérience fluide du mobile à l'écran de bureau.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico">📊</div>
+        <h4>Data Driven</h4>
+        <p>Suivi analytique intégré pour maximiser votre ROI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise (photos) -->
+  <section class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Sur le terrain</div>
+      <h2>Notre expertise en action</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <img src="images/dev-team.jpg" alt="Développement web — code sur écran">
+        <div class="expertise-overlay">
+          <span class="tag-pill">Développement</span>
+          <h3>Un code pensé pour durer</h3>
+          <p>Des solutions robustes, testées et documentées, prêtes à évoluer avec votre activité.</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="images/cyber-security.jpg" alt="Cybersécurité — supervision des systèmes">
+        <div class="expertise-overlay">
+          <span class="tag-pill orange">Cybersécurité</span>
+          <h3>Vos données sous surveillance</h3>
+          <p>Une supervision continue pour anticiper les menaces et protéger vos systèmes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Chiffres / A propos -->
+  <section class="wrap" id="about">
+    <div class="about-grid">
+      <div>
+        <div class="sec-eyebrow">Notre Vision</div>
+        <h2 style="margin-bottom: 24px;">Créer l'infrastructure technique de vos ambitions.</h2>
+        <p class="about-text">Chez CORA, nous ne créons pas seulement des lignes de code. Nous bâtissons des écosystèmes complets pour moderniser les secteurs clés comme l'administration, l'éducation et l'énergie.</p>
+        <p class="about-text">CORA Startup accompagne entreprises, organisations et particuliers dans leur transformation digitale, grâce à des solutions performantes, innovantes et accessibles.</p>
+      </div>
+      <div class="stats-box">
+        <div class="stat-card">
+          <b>99%</b>
+          <span>Disponibilité Serveur</span>
+        </div>
+        <div class="stat-card">
+          <b>3x</b>
+          <span>Plus rapide à déployer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="wrap" id="vision">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Notre cap</div>
+      <h2>Vision &amp; mission</h2>
+    </div>
+    <div class="vm-grid">
+      <div class="vm-card">
+        <span class="tag-pill">Vision</span>
+        <h3>Une référence en Afrique</h3>
+        <p>Devenir une référence dans le domaine des technologies numériques en Afrique, en offrant des solutions innovantes qui créent de la valeur et favorisent le développement des entreprises.</p>
+      </div>
+      <div class="vm-card">
+        <span class="tag-pill orange">Mission</span>
+        <h3>Accompagner la modernisation</h3>
+        <p>Concevoir et fournir des solutions numériques performantes, accompagner nos clients dans leurs projets digitaux et contribuer à la modernisation des entreprises grâce aux nouvelles technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre Innovation -->
+  <section class="wrap" id="innovation">
+    <div class="sec-head" style="margin: 0 auto 50px; text-align:center; max-width: 700px;">
+      <div class="sec-eyebrow">Ce qui nous anime</div>
+      <h2>Notre innovation</h2>
+    </div>
+    <div class="innovation-quote">
+      <h3>« Innover, Créer, Transformer. »</h3>
+      <p>Chez CORA Startup, nous croyons que chaque projet mérite une solution numérique efficace, moderne et durable.</p>
+    </div>
+    <div class="values-row">
+      <span class="value-chip">Innovation</span>
+      <span class="value-chip">Professionnalisme</span>
+      <span class="value-chip">Qualité</span>
+      <span class="value-chip">Transparence</span>
+      <span class="value-chip">Esprit d'équipe</span>
+      <span class="value-chip">Satisfaction client</span>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="wrap" id="services">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Nos expertises</div>
+      <h2>Des compétences transversales pour un produit irréprochable.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service"><div class="num">01</div><h3>Sites web &amp; applications</h3><p>Développement de sites web et d'applications mobiles sur mesure.</p></div>
+      <div class="service"><div class="num">02</div><h3>Logiciels sur mesure</h3><p>Conception de logiciels adaptés aux besoins spécifiques de chaque client.</p></div>
+      <div class="service"><div class="num">03</div><h3>Cloud &amp; hébergement</h3><p>Hébergement et solutions Cloud fiables et évolutives.</p></div>
+      <div class="service"><div class="num">04</div><h3>Cybersécurité</h3><p>Protection des données et sécurisation des systèmes d'information.</p></div>
+      <div class="service"><div class="num">05</div><h3>Marketing digital</h3><p>Communication numérique et stratégies marketing pour votre visibilité.</p></div>
+      <div class="service" style="border-color: rgba(96,165,250,.35); background: linear-gradient(160deg, rgba(37,99,235,.1), rgba(249,115,22,.08));"><div class="num">06</div><h3>Organisation de surprises</h3><p>Anniversaires, demandes en mariage, remises de diplômes, retrouvailles, fêtes — à domicile ou au travail.</p></div>
+      <div class="service"><div class="num">07</div><h3>Maintenance &amp; support</h3><p>Maintenance informatique et support technique réactif.</p></div>
+      <div class="service"><div class="num">08</div><h3>Conseil digital</h3><p>Accompagnement stratégique en transformation digitale.</p></div>
+      <div class="service"><div class="num">09</div><h3>Formation</h3><p>Formation aux outils numériques pour vos équipes.</p></div>
+    </div>
+  </section>
+
+  <!-- Projets réalisés -->
+  <section class="wrap" id="projets">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Notre portfolio</div>
+      <h2>Projets réalisés</h2>
+    </div>
+    <div class="projects-list">
+
+      <div class="project-card reveal">
+        <div class="project-banner banner-school">
+          <div class="banner-pattern"></div>
+          <div class="project-ico blue floaty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Plateforme de gestion scolaire — École internationale chinoise</h3>
+            <span class="year-tag">2026</span>
+          </div>
+          <ul>
+            <li>Développement d'une plateforme complète de gestion scolaire.</li>
+            <li>Gestion des élèves, enseignants, notes, bulletins, paiements et utilisateurs.</li>
+            <li>Plus de 12 modules développés et 25+ API REST créées.</li>
+            <li>Tableau de bord administrateur et interfaces responsives.</li>
+            <li>Déploiement en production et maintenance continue.</li>
+          </ul>
+          <a href="https://eic-manager.servepics.com/login" target="_blank" rel="noopener" class="project-link">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+            eic-manager.servepics.com/login
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-banner banner-energy">
+          <div class="banner-pattern"></div>
+          <div class="project-ico orange floaty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 22V4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v18"/><path d="M3 10h9"/><path d="M14 8h2l3 3v6a1 1 0 0 1-1 1h-1"/><circle cx="17.5" cy="17.5" r="1.5"/><path d="M6 22v-4h4v4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>FaakiEnergie</h3>
+            <span class="year-tag">2026</span>
+          </div>
+          <ul>
+            <li>Application mobile (Flutter) permettant de rechercher le carburant et les gaz disponibles en temps réel.</li>
+            <li>Géolocalisation des stations-service et affichage des prix.</li>
+            <li>Mise à jour en temps réel des disponibilités.</li>
+            <li>Projet innovant en cours de développement (laboratoire).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-banner banner-africa">
+          <div class="banner-pattern"></div>
+          <div class="project-ico navy floaty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2c-1.5 2-2 4-1 6 .8 1.6 0 3-1 4-1.3 1.4-2 3-1 5 .6 1.2 2 2 2 4"/>
+              <path d="M13 3c2 1 3.5 2.5 4 5 .4 2-1 3-1 5 0 2 2 3 3 5"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>OS for Africa</h3>
+            <span class="year-tag">2026</span>
+          </div>
+          <ul>
+            <li>Plateforme web de soutien et d'opportunités pour la jeunesse africaine.</li>
+            <li>Gestion des projets, événements, formations et actualités.</li>
+            <li>Système d'authentification et gestion des membres.</li>
+            <li>Développement en cours avec Laravel, MySQL et MongoDB.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section class="wrap" id="equipe">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Les personnes derrière CORA</div>
+      <h2>Notre équipe dirigeante</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar">BC</div>
+        <h3>Bitodi Cornelca</h3>
+        <div class="role">Directeur Général</div>
+        <p>Fondateur de CORA Startup, il définit la vision stratégique de l'entreprise, supervise l'ensemble des activités et veille à l'innovation ainsi qu'à la qualité des services proposés.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar">MY</div>
+        <h3>Moulongo Yann</h3>
+        <div class="role">Directeur Général Adjoint</div>
+        <p>Il accompagne le Directeur Général dans la gestion quotidienne de l'entreprise, coordonne les projets et participe au développement des partenariats stratégiques.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar">KA</div>
+        <h3>Kaya Armel</h3>
+        <div class="role">Responsable Communication</div>
+        <p>Il est chargé de la communication interne et externe de l'entreprise, de la gestion de l'image de marque, des réseaux sociaux et des relations avec les clients et partenaires.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar">OB</div>
+        <h3>Okombi Beni</h3>
+        <div class="role">Chef de Projet</div>
+        <p>Il planifie, coordonne et supervise les projets de l'entreprise. Il veille au respect des délais et de la qualité des livrables, et assure une communication efficace entre les équipes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="motto wrap" id="contact">
+    <h2>Prêt à donner vie à votre projet ?</h2>
+    <p style="color: var(--ink-dim); max-width: 500px; margin: 0 auto 32px;">Analysons ensemble vos besoins pour concevoir votre future solution technologique.</p>
+    <div class="availability-badge">
+      <span class="pulse-dot"></span>
+      Disponible 24h/24 — 7j/7
+    </div>
+
+    <button type="button" class="btn btn-primary" style="padding: 16px 36px; font-size: 1rem; border:none; cursor:pointer;" onclick="document.getElementById('contact-options').classList.toggle('open')">Contacter l'équipe CORA</button>
+
+    <div id="contact-options" class="contact-options">
+      <button type="button" class="contact-option" onclick="openContactModal('whatsapp')">
+        <span class="ico-wrap wa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.79 14.09c-.24.68-1.4 1.3-1.93 1.34-.5.04-1.02.24-3.44-.72-2.9-1.16-4.77-4.06-4.91-4.25-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 1.99.9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.11.07.65-.17 1.34z"/></svg>
+        </span>
+        <span>
+          <b>WhatsApp</b>
+          <small>06 46 74 314</small>
+        </span>
+      </button>
+      <button type="button" class="contact-option" onclick="openContactModal('email')">
+        <span class="ico-wrap mail">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        </span>
+        <span>
+          <b>Email</b>
+          <small>coracornelca@gmail.com</small>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap foot-row">
+      <div style="display:flex; align-items:center; gap:10px; font-weight:700; color:var(--ink);">
+        <img src="images/logo.jpg" alt="CORA" style="height:22px; width:auto;"> CORA Startup
+      </div>
+      <div class="footer-24h">
+        <span class="pulse-dot"></span> Ouvert 24h/24, 7j/7
+      </div>
+      <p>&copy; 2026 CORA Startup. Tous droits réservés.</p>
+      <p style="font-size: 0.8rem;">Brazzaville, Congo</p>
+    </div>
+  </footer>
+</main>
+
+<div class="float-menu">
+  <div id="float-options" class="float-options">
+    <button type="button" class="float-option wa" aria-label="WhatsApp" onclick="openContactModal('whatsapp')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.79 14.09c-.24.68-1.4 1.3-1.93 1.34-.5.04-1.02.24-3.44-.72-2.9-1.16-4.77-4.06-4.91-4.25-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 1.99.9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.11.07.65-.17 1.34z"/></svg>
+      <span class="float-label">WhatsApp</span>
+    </button>
+    <button type="button" class="float-option mail" aria-label="Email" onclick="openContactModal('email')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+      <span class="float-label">Email</span>
+    </button>
+  </div>
+  <button type="button" class="whatsapp-float" onclick="document.getElementById('float-options').classList.toggle('open'); this.classList.toggle('active')" aria-label="Nous contacter">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.79 14.09c-.24.68-1.4 1.3-1.93 1.34-.5.04-1.02.24-3.44-.72-2.9-1.16-4.77-4.06-4.91-4.25-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 1.99.9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.11.07.65-.17 1.34z"/></svg>
+  </button>
+</div>
+
+<!-- Modal Contact Form -->
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" onclick="closeContactModal()">&times;</button>
+    <div class="modal-header">
+      <div id="modal-icon" class="modal-icon wa-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.79 14.09c-.24.68-1.4 1.3-1.93 1.34-.5.04-1.02.24-3.44-.72-2.9-1.16-4.77-4.06-4.91-4.25-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 1.99.9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.11.07.65-.17 1.34z"/></svg>
+      </div>
+      <h3 id="modal-title">Envoyer un message</h3>
+      <p id="modal-subtitle" class="modal-subtitle">via WhatsApp</p>
+    </div>
+    <form id="contact-form" class="modal-form" onsubmit="submitContactForm(event)">
+      <div class="form-group">
+        <label for="cf-name">Votre nom</label>
+        <input type="text" id="cf-name" name="name" placeholder="Ex: Jean Dupont" required>
+      </div>
+      <div class="form-group">
+        <label for="cf-phone">Téléphone</label>
+        <input type="tel" id="cf-phone" name="phone" placeholder="Ex: 06 46 74 314" required>
+      </div>
+      <div class="form-group">
+        <label for="cf-email">Email (optionnel)</label>
+        <input type="email" id="cf-email" name="email" placeholder="Ex: jean@email.com">
+      </div>
+      <div class="form-group">
+        <label for="cf-subject">Sujet</label>
+        <input type="text" id="cf-subject" name="subject" placeholder="Ex: Demande de devis" required>
+      </div>
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; padding:12px; font-size:0.9rem; border:none; cursor:pointer;" id="cf-submit-btn">
+        Envoyer via WhatsApp
+      </button>
+    </form>
+    <div id="success-msg" class="success-msg">
+      <div class="check">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Envoyé avec succès !</h3>
+      <p>Merci, nous vous répondrons très rapidement.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
