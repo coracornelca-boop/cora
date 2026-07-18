@@ -413,27 +413,47 @@
   }
   footer::before {
     content: ''; position: absolute;
-    top: -60px; left: -120px;
-    width: 350px; height: 350px;
-    background: radial-gradient(circle, rgba(249,115,22,0.25) 0%, rgba(251,146,60,0.12) 30%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(40px);
+    top: 0; left: -100%; width: 300%; height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,0,0,0.06) 15%,
+      rgba(255,127,0,0.07) 25%,
+      rgba(255,255,0,0.06) 35%,
+      rgba(0,255,0,0.06) 45%,
+      rgba(0,127,255,0.07) 55%,
+      rgba(75,0,130,0.06) 65%,
+      rgba(148,0,211,0.05) 75%,
+      transparent 100%
+    );
+    animation: rainbowSweep 6s linear infinite;
     pointer-events: none;
-    animation: sunGlow 4s ease-in-out infinite alternate;
   }
   footer::after {
     content: ''; position: absolute;
-    top: -30px; left: -60px;
-    width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(255,220,150,0.3) 0%, rgba(255,180,80,0.1) 40%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(25px);
+    top: -40%; left: -60%; width: 220%; height: 180%;
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(255,0,0,0.08),
+      rgba(255,127,0,0.08),
+      rgba(255,255,0,0.07),
+      rgba(0,255,0,0.07),
+      rgba(0,127,255,0.08),
+      rgba(75,0,130,0.07),
+      rgba(148,0,211,0.07),
+      rgba(255,0,0,0.08)
+    );
+    filter: blur(60px);
+    animation: rainbowPulse 5s ease-in-out infinite alternate;
     pointer-events: none;
-    animation: sunGlow 3s ease-in-out infinite alternate-reverse;
   }
-  @keyframes sunGlow {
-    0% { opacity: 0.6; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.15); }
+  @keyframes rainbowSweep {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(33.33%); }
+  }
+  @keyframes rainbowPulse {
+    0% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+    100% { opacity: 0.8; transform: scale(1.1) rotate(3deg); }
   }
   .foot-row { display: flex; justify-content: space-between; align-items: center; color: var(--ink-dim); font-size: 0.9rem; }
 
