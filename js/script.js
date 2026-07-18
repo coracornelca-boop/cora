@@ -218,6 +218,63 @@
     document.querySelector('.modal-header').style.display = 'none';
     document.getElementById('success-msg').classList.add('show');
   }
+
+  /* ---------- Bouton flottant draggable ---------- */
+  (function(){
+    const menu = document.querySelector('.float-menu');
+    const btn = menu.querySelector('.whatsapp-float');
+    let isDragging = false, moved = false;
+    let startX, startY, startLeft, startTop;
+
+    function onPointerDown(e){
+      if(e.target.closest('.float-options')) return;
+      isDragging = false; moved = false;
+      const rect = menu.getBoundingClientRect();
+      startX = e.clientX || e.touches[0].clientX;
+      startY = e.clientY || e.touches[0].clientY;
+      startLeft = rect.left;
+      startTop = rect.top;
+      menu.style.transition = 'none';
+      document.addEventListener('pointermove', onPointerMove);
+      document.addEventListener('pointerup', onPointerUp);
+      e.preventDefault();
+    }
+
+    function onPointerMove(e){
+      const cx = e.clientX || e.touches[0].clientX;
+      const cy = e.clientY || e.touches[0].clientY;
+      const dx = cx - startX;
+      const dy = cy - startY;
+      if(Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+      if(!moved) return;
+      isDragging = true;
+      menu.style.right = 'auto';
+      menu.style.bottom = 'auto';
+      menu.style.left = (startLeft + dx) + 'px';
+      menu.style.top = (startTop + dy) + 'px';
+    }
+
+    function onPointerUp(){
+      document.removeEventListener('pointermove', onPointerMove);
+      document.removeEventListener('pointerup', onPointerUp);
+      menu.style.transition = '';
+      if(isDragging){
+        const rect = menu.getBoundingClientRect();
+        const w = window.innerWidth, h = window.innerHeight;
+        let newLeft = rect.left, newTop = rect.top;
+        if(newLeft < 0) newLeft = 0;
+        if(newTop < 0) newTop = 0;
+        if(newLeft + rect.width > w) newLeft = w - rect.width;
+        if(newTop + rect.height > h) newTop = h - rect.height;
+        menu.style.left = newLeft + 'px';
+        menu.style.top = newTop + 'px';
+      }
+      setTimeout(()=>{ isDragging = false; }, 10);
+    }
+
+    menu.addEventListener('pointerdown', onPointerDown);
+  })();
+
   const revealEls = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     const revealObserver = new IntersectionObserver((entries)=>{
