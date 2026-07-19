@@ -334,7 +334,8 @@
   .avatar {
     width: 80px; height: 80px; border-radius: 50%; display: block;
     object-fit: cover; object-position: top center;
-    margin: -90px auto 16px; border: 3px solid rgba(255,255,255,0.08);
+    margin: -90px auto 16px; border: 3px solid #fff;
+    background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
   }
   .team-card h3 { font-size: 1rem; }
   .team-card .role { margin-top: 4px; font-size: .78rem; color: var(--orange-light); font-weight: 600; }
