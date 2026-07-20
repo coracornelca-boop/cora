@@ -176,7 +176,7 @@
   .feature-card .ico {
     width: 48px; height: 48px; margin: 0 auto 20px; border-radius: 14px;
     background: linear-gradient(135deg, var(--blue), var(--orange));
-    display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold;
+    display: flex; align-items: center; justify-content: center; color: #fff;
   }
   .feature-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
   .feature-card p { font-size: 0.85rem; color: var(--ink-dim); }
@@ -363,7 +363,7 @@
     max-height: 0; opacity: 0; overflow: hidden;
     transition: max-height .35s ease, opacity .3s ease, margin .35s ease;
   }
-  .contact-options.open { max-height: 200px; opacity: 1; }
+  .contact-options.open { max-height: 400px; opacity: 1; }
   .contact-option {
     display: flex; align-items: center; gap: 14px; text-align: left;
     padding: 14px 18px; border-radius: 14px;
@@ -378,6 +378,10 @@
   }
   .ico-wrap.wa { background: #25D366; }
   .ico-wrap.mail { background: linear-gradient(135deg, var(--blue), var(--orange)); }
+  .ico-wrap.facebook { background: #1877F2; }
+  .ico-wrap.tiktok { background: #010101; border: 1px solid rgba(255,255,255,0.15); }
+  .contact-link { cursor: pointer; text-decoration: none; }
+  .contact-link:hover { background: rgba(255,255,255,0.06); border-color: rgba(96,165,250,.4); }
 
   /* ---------- Menu flottant (WhatsApp + Email) ---------- */
   .float-menu { position: fixed; right: 24px; bottom: 24px; z-index: 50; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
@@ -386,7 +390,7 @@
     max-height: 0; opacity: 0; overflow: hidden; align-items: flex-end;
     transition: max-height .3s ease, opacity .25s ease;
   }
-  .float-options.open { max-height: 200px; opacity: 1; }
+  .float-options.open { max-height: 350px; opacity: 1; }
   .float-option {
     display: flex; align-items: center; gap: 10px;
     padding: 10px 16px 10px 12px; border-radius: 999px;
@@ -398,6 +402,8 @@
   .float-option svg { width: 20px; height: 20px; flex-shrink: 0; }
   .float-option.wa svg { fill: #25D366; }
   .float-option.mail svg { stroke: var(--blue-light); }
+  .float-option.facebook svg { fill: #1877F2; }
+  .float-option.tiktok svg { fill: #fff; }
   .float-option:hover { border-color: rgba(96,165,250,.4); }
 
   .whatsapp-float {
@@ -460,6 +466,25 @@
     100% { opacity: 0.8; transform: scale(1.1) rotate(3deg); }
   }
   .foot-row { display: flex; justify-content: space-between; align-items: center; color: var(--ink-dim); font-size: 0.9rem; }
+
+  /* ---------- Footer Social Links ---------- */
+  .footer-social { display: flex; gap: 12px; align-items: center; }
+  .social-link {
+    width: 40px; height: 40px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+    color: var(--ink-dim); transition: all 0.3s ease;
+  }
+  .social-link:hover { transform: translateY(-2px); }
+  .social-link.facebook:hover { background: rgba(24,119,242,0.15); border-color: rgba(24,119,242,0.4); color: #1877F2; }
+  .social-link.tiktok:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); color: #fff; }
+  .social-link.whatsapp:hover { background: rgba(37,211,102,0.15); border-color: rgba(37,211,102,0.4); color: #25D366; }
+  .social-link.email:hover { background: rgba(96,165,250,0.12); border-color: rgba(96,165,250,0.35); color: var(--blue-light); }
+
+  @media (max-width: 640px) {
+    .foot-row { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-social { justify-content: center; }
+  }
 
   /* ---------- Badge Disponibilité 24/24 ---------- */
   .availability-badge {
